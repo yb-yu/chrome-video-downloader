@@ -1,0 +1,16 @@
+node_modules/
+dist/
+releases/
+public/ffmpeg/
+coverage/
+*.log
+.DS_Store
+.vite/
+.env
+.env.*
+*.crx
+*.pem
+*.key
+*.p12
+*.pfx
+*.zip

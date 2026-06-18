@@ -1,0 +1,32 @@
+{
+  "name": "chrome-video-downloader",
+  "version": "1.0.0",
+  "description": "Detect and save MP4, WebM, HLS, and DASH media from the active tab.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "predev": "node scripts/copy-ffmpeg.mjs",
+    "build": "tsc --noEmit && vite build",
+    "prebuild": "node scripts/copy-ffmpeg.mjs",
+    "package": "npm run build && node scripts/package.mjs",
+    "typecheck": "tsc --noEmit",
+    "preview": "vite preview"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.0-beta.28",
+    "@types/chrome": "^0.0.270",
+    "archiver": "^8.0.0",
+    "typescript": "^5.5.4",
+    "vite": "^8.0.16"
+  },
+  "dependencies": {
+    "@ffmpeg/core": "^0.12.10",
+    "@ffmpeg/ffmpeg": "^0.12.10",
+    "@ffmpeg/util": "^0.12.1"
+  }
+}
